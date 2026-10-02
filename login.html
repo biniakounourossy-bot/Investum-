@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InvestSim — Connexion</title><link rel="stylesheet" href="style.css"></head>
+<body><header><a class="logo" href="index.html">InvestSim</a><nav><a href="index.html">Accueil</a><a href="simulator.html">Simulateur</a></nav></header>
+<main class="center"><form class="card form" onsubmit="login(event)"><h1>Connexion</h1><p class="muted">Prototype local : aucune donnée n'est envoyée à un serveur.</p>
+<label>Email<input id="email" type="email" required placeholder="toi@exemple.com"></label>
+<label>Mot de passe<input id="password" type="password" required minlength="4" placeholder="••••••••"></label>
+<button class="btn" type="submit">Se connecter</button><p id="message" class="gain"></p></form></main>
+<script>
+function login(e){e.preventDefault();localStorage.setItem("investsim_user",document.getElementById("email").value);location.href="simulator.html";}
+</script>
+</body></html>
